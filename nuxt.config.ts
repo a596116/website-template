@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import Components from 'unplugin-vue-components/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineNuxtConfig({
 
@@ -12,29 +13,39 @@ export default defineNuxtConfig({
         tsConfig: {
             compilerOptions: {
                 strict: true,
-                types: ['@pinia/nuxt', './type.d.ts'],
+                types: ['@pinia/nuxt', './types/type.d.ts'],
             },
         },
     },
 
-    // plugins
-    // plugins: ['~/plugins/element-plus'],
-
     // css
-    css: [],
-
-
+    css: ['~/assets/sass/app.scss', '~/assets/sass/mode/dark.scss', '~/assets/sass/mode/light.scss'],
 
     // modules
     modules: [
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
+        'unplugin-icons/nuxt',
+        '@intlify/nuxt3',
     ],
 
-
+    // build
+    build: {
+        transpile: ['@headlessui/vue']
+    },
 
     // auto import components
     components: true,
+
+    // localization - i18n config
+    intlify: {
+        localeDir: 'locales',
+        vueI18n: {
+            locale: 'zh',
+            fallbackLocale: 'zh',
+            availableLocales: ['en', 'zh'],
+        },
+    },
 
     // vite
     vite: {
@@ -45,8 +56,12 @@ export default defineNuxtConfig({
 
         plugins: [
             Components({
-                dts: true,
-                resolvers: [],
+                dts: 'types/components.d.ts',
+                resolvers: [
+                    IconsResolver({
+                        prefix: 'Icon',
+                    })
+                ],
             }),
         ],
     },

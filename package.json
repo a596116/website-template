@@ -24,8 +24,12 @@
     "vue-tsc": "^1.2.0"
   },
   "dependencies": {
+    "@iconify/json": "^2.2.30",
+    "@intlify/nuxt3": "^0.2.4",
     "@nuxtjs/tailwindcss": "^6.4.1",
     "@pinia/nuxt": "^0.4.7",
+    "nuxt-headlessui": "^1.1.1",
+    "unplugin-icons": "^0.15.3",
     "vite": "^4.1.4"
   }
 }

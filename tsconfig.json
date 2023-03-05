@@ -6,6 +6,6 @@
     // "skipLibCheck": true,
     "outDir": "./.output/public/",
       "skipLibCheck": true,
-    "types": ["@pinia/nuxt"]
+    "types": ["@pinia/nuxt", "@intlify/nuxt3"]
   }
 }
