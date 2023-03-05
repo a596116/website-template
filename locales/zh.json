@@ -1,0 +1,25 @@
+{
+  "components": {
+    "language_switcher": { "change_language": "切換語言" },
+    "theme_switcher": { "theme": "主題", "change_theme": "切換主題" }
+  },
+  "pages": {
+    "404": { "title": "找不到該網頁" },
+    "index": {
+      "title": "首頁",
+      "about": {
+        "title": "關於",
+        "description": "畢業於靜宜大學 資料科學暨大數據分析與應用學系。 擅長於前端技術並熟悉使用Vue.js框架、Git版控開發網站。 在後端方面也會使用Nodjs搭配egg串接RestfulAPI，也使用過Django開發LineBot"
+      },
+      "contact": "聯絡資訊"
+    },
+    "articles": { "nav": "文章", "title": "文章", "description": "這是一個文章頁面" },
+    "about": {
+      "nav": "關於",
+      "title": "關於",
+      "description": "這是一個關於頁面"
+    }
+  },
+  "banners": { "welcome": "你好, 欢迎来到 %{app_name}!" },
+  "others": { "learn_more": "了解更多", "copy": "複製", "enabled": "啟用", "disabled": "禁用" }
+}
