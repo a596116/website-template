@@ -2,8 +2,8 @@ module.exports = {
   disableEmoji: false, // 是否禁用 emoji
   format: '{type}{scope}: {emoji}{subject}', // Commit 訊息的格式
   list: [
-    'test',
     'feat',
+    'test',
     'fix',
     'chore',
     'docs',
@@ -43,7 +43,7 @@ module.exports = {
     },
     feat: {
       description: '新增/修改功能 (Feature)',
-      emoji: '🎸',
+      emoji: '💻',
       value: 'feat',
     },
     fix: {

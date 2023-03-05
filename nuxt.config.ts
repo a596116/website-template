@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         tsConfig: {
             compilerOptions: {
                 strict: true,
+                types: ['@pinia/nuxt', './type.d.ts'],
             },
         },
     },
@@ -26,6 +27,8 @@ export default defineNuxtConfig({
 
     // modules
     modules: [
+        '@nuxtjs/tailwindcss',
+        '@pinia/nuxt',
     ],
 
 
@@ -46,13 +49,6 @@ export default defineNuxtConfig({
                 resolvers: [],
             }),
         ],
-        // 解决在开发模式下降低 naive-ui 引起的打包缓慢
-        // optimizeDeps: {
-        //     include:
-        //         process.env.NODE_ENV === 'development'
-        //             ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
-        //             : [],
-        // },
     },
 
 })
